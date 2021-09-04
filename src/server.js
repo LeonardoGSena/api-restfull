@@ -7,7 +7,8 @@ const app = express()
 
 db.connect()
 
-app.use(express.urlencoded({ extended: true }))
+//habilita sever para receber JSON
+app.use(express.json())
 
 app.use('/api', routes)
 
